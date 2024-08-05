@@ -36,21 +36,25 @@ These functions return pointers to values of their respective types. They are us
 
 #### Usage Example
 
+```shell
+go get github.com/tlabdotcom/gohelper
+```
+
 ```go
 package main
 
 import (
     "fmt"
     "github.com/google/uuid"
-    "path/to/your/helper"
+    "github.com/tlabdotcom/gohelper"
 )
 
 func main() {
     str := "Hello, World!"
-    strPtr := helper.PointerString(str)
+    strPtr := gohelper.PointerString(str)
     fmt.Println(*strPtr) // Output: Hello, World!
 
     id := uuid.New()
-    idPtr := helper.PointerUUID(id)
+    idPtr := gohelper.PointerUUID(id)
     fmt.Println(*idPtr) // Output: (some UUID value)
 }
