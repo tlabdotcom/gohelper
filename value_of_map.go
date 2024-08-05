@@ -8,6 +8,7 @@ import (
 )
 
 // SafeGetStringValue safely retrieves a string value from a map by key.
+// If the key is not found or the value is not a string, it returns the default value.
 func SafeGetStringValue(m map[string]interface{}, key string, defaultValue string) string {
 	value, exists := m[key]
 	if !exists {
@@ -27,6 +28,7 @@ func SafeGetStringValue(m map[string]interface{}, key string, defaultValue strin
 }
 
 // SafeGetIntValue safely retrieves an int value from a map by key.
+// If the key is not found or the value is not an int, it returns the default value.
 func SafeGetIntValue(m map[string]interface{}, key string, defaultValue int) int {
 	value, exists := m[key]
 	if !exists {
@@ -48,6 +50,7 @@ func SafeGetIntValue(m map[string]interface{}, key string, defaultValue int) int
 }
 
 // SafeGetInt64Value safely retrieves an int64 value from a map by key.
+// If the key is not found or the value is not an int64, it returns the default value.
 func SafeGetInt64Value(m map[string]interface{}, key string, defaultValue int64) int64 {
 	value, exists := m[key]
 	if !exists {
@@ -69,6 +72,7 @@ func SafeGetInt64Value(m map[string]interface{}, key string, defaultValue int64)
 }
 
 // SafeGetFloat64Value safely retrieves a float64 value from a map by key.
+// If the key is not found or the value is not a float64, it returns the default value.
 func SafeGetFloat64Value(m map[string]interface{}, key string, defaultValue float64) float64 {
 	value, exists := m[key]
 	if !exists {
@@ -90,6 +94,7 @@ func SafeGetFloat64Value(m map[string]interface{}, key string, defaultValue floa
 }
 
 // SafeGetBoolValue safely retrieves a bool value from a map by key.
+// If the key is not found or the value is not a bool, it returns the default value.
 func SafeGetBoolValue(m map[string]interface{}, key string, defaultValue bool) bool {
 	value, exists := m[key]
 	if !exists {
@@ -107,6 +112,7 @@ func SafeGetBoolValue(m map[string]interface{}, key string, defaultValue bool) b
 }
 
 // SafeGetValue safely retrieves a value of any type from a map by key.
+// If the key is not found or the value cannot be cast to the desired type, it returns the default value.
 func SafeGetValue(m map[string]interface{}, key string, defaultValue interface{}) interface{} {
 	value, exists := m[key]
 	if !exists {
