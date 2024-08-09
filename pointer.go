@@ -117,3 +117,155 @@ func PointerByte(prm byte) *byte {
 func PointerRune(prm rune) *rune {
 	return &prm
 }
+
+// GetUUIDValue returns the value of a uuid.UUID pointer.
+func GetUUIDValue(ptr *uuid.UUID) uuid.UUID {
+	if ptr == nil {
+		return uuid.UUID{}
+	}
+	return *ptr
+}
+
+// GetStringValue returns the value of a string pointer.
+func GetStringValue(ptr *string) string {
+	if ptr == nil {
+		return ""
+	}
+	return *ptr
+}
+
+// GetBoolValue returns the value of a bool pointer.
+func GetBoolValue(ptr *bool) bool {
+	if ptr == nil {
+		return false
+	}
+	return *ptr
+}
+
+// GetIntValue returns the value of an int pointer.
+func GetIntValue(ptr *int) int {
+	if ptr == nil {
+		return 0
+	}
+	return *ptr
+}
+
+// GetInt8Value returns the value of an int8 pointer.
+func GetInt8Value(ptr *int8) int8 {
+	if ptr == nil {
+		return 0
+	}
+	return *ptr
+}
+
+// GetInt16Value returns the value of an int16 pointer.
+func GetInt16Value(ptr *int16) int16 {
+	if ptr == nil {
+		return 0
+	}
+	return *ptr
+}
+
+// GetInt32Value returns the value of an int32 pointer.
+func GetInt32Value(ptr *int32) int32 {
+	if ptr == nil {
+		return 0
+	}
+	return *ptr
+}
+
+// GetInt64Value returns the value of an int64 pointer.
+func GetInt64Value(ptr *int64) int64 {
+	if ptr == nil {
+		return 0
+	}
+	return *ptr
+}
+
+// GetUintValue returns the value of a uint pointer.
+func GetUintValue(ptr *uint) uint {
+	if ptr == nil {
+		return 0
+	}
+	return *ptr
+}
+
+// GetUint8Value returns the value of a uint8 pointer.
+func GetUint8Value(ptr *uint8) uint8 {
+	if ptr == nil {
+		return 0
+	}
+	return *ptr
+}
+
+// GetUint16Value returns the value of a uint16 pointer.
+func GetUint16Value(ptr *uint16) uint16 {
+	if ptr == nil {
+		return 0
+	}
+	return *ptr
+}
+
+// GetUint32Value returns the value of a uint32 pointer.
+func GetUint32Value(ptr *uint32) uint32 {
+	if ptr == nil {
+		return 0
+	}
+	return *ptr
+}
+
+// GetUint64Value returns the value of a uint64 pointer.
+func GetUint64Value(ptr *uint64) uint64 {
+	if ptr == nil {
+		return 0
+	}
+	return *ptr
+}
+
+// GetFloat32Value returns the value of a float32 pointer.
+func GetFloat32Value(ptr *float32) float32 {
+	if ptr == nil {
+		return 0.0
+	}
+	return *ptr
+}
+
+// GetFloat64Value returns the value of a float64 pointer.
+func GetFloat64Value(ptr *float64) float64 {
+	if ptr == nil {
+		return 0.0
+	}
+	return *ptr
+}
+
+// GetComplex64Value returns the value of a complex64 pointer.
+func GetComplex64Value(ptr *complex64) complex64 {
+	if ptr == nil {
+		return 0 + 0i
+	}
+	return *ptr
+}
+
+// GetComplex128Value returns the value of a complex128 pointer.
+func GetComplex128Value(ptr *complex128) complex128 {
+	if ptr == nil {
+		return 0 + 0i
+	}
+	return *ptr
+}
+
+// GetByteValue returns the value of a byte pointer.
+func GetByteValue(ptr *byte) byte {
+	if ptr == nil {
+		return 0
+	}
+	return *ptr
+}
+
+// GetRuneValue returns the value of a rune pointer.
+func GetRuneValue(ptr *rune) rune {
+	if ptr == nil {
+		return 0
+	}
+	return *ptr
+}
