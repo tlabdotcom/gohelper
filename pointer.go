@@ -1,6 +1,8 @@
 package gohelper
 
 import (
+	"time"
+
 	"github.com/google/uuid"
 )
 
@@ -115,6 +117,12 @@ func PointerByte(prm byte) *byte {
 // PointerRune returns a pointer to the given rune.
 // It is useful for creating pointers to rune values.
 func PointerRune(prm rune) *rune {
+	return &prm
+}
+
+// PointerTime returns a pointer to the given time.
+// It is useful for creating pointers to time values.
+func PointerTime(prm time.Time) *time.Time {
 	return &prm
 }
 
@@ -266,6 +274,14 @@ func GetByteValue(ptr *byte) byte {
 func GetRuneValue(ptr *rune) rune {
 	if ptr == nil {
 		return 0
+	}
+	return *ptr
+}
+
+// GetRuneValue returns the value of a rune pointer.
+func GetTimeValue(ptr *time.Time) time.Time {
+	if ptr == nil {
+		return time.Time{}
 	}
 	return *ptr
 }
