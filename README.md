@@ -2,6 +2,10 @@
 
 **Maintainer:** jiharal
 
+![Go CI](https://github.com/tlabdotcom/gohelper/actions/workflows/go.yml/badge.svg)
+
+[![Go Report Card](https://goreportcard.com/badge/github.com/tlabdotcom/gohelper)](https://goreportcard.com/report/github.com/tlabdotcom/gohelper)
+
 ## Overview
 
 The `GOHELPER` package provides utility functions for working with pointers and safely retrieving values from maps in Go. These helper functions can make your code cleaner and more concise.
@@ -58,3 +62,4 @@ func main() {
     idPtr := gohelper.PointerUUID(id)
     fmt.Println(*idPtr) // Output: (some UUID value)
 }
+```
